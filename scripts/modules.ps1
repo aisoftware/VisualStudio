@@ -99,14 +99,14 @@ New-Module -ScriptBlock {
 
 New-Module -ScriptBlock {
     function Find-MSBuild() {
-        if (Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\bin\MSBuild.exe") {
-            $msbuild = "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\bin\MSBuild.exe"
+        if (Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\15.0\bin\MSBuild.exe") {
+            $msbuild = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\15.0\bin\MSBuild.exe"
         }
-        elseif (Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\MSBuild.exe") {
-            $msbuild = "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\MSBuild.exe"
+        elseif (Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\15.0\Bin\MSBuild.exe") {
+            $msbuild = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\15.0\Bin\MSBuild.exe"
         }
-        elseif (Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\MSBuild.exe") {
-            $msbuild = "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\MSBuild.exe"
+        elseif (Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\15.0\Bin\MSBuild.exe") {
+            $msbuild = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\15.0\Bin\MSBuild.exe"
         }
         else {
             Die("No suitable msbuild.exe found.")
