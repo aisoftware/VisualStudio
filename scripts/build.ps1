@@ -81,5 +81,6 @@ if ($Package) {
 }
 
 Build-Solution GitHubVs.sln "Build" $config -Deploy:$Package -ForVSInstaller:$ForVSInstaller
+Build-Solution src\GitHub.VisualStudio.16.sln "Build" $config -Deploy:$Package -ForVSInstaller:$ForVSInstaller
 
 Pop-Location
