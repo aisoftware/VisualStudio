@@ -9,6 +9,9 @@ function Die([string]$message, [object[]]$output) {
     Throw (New-Object -TypeName ScriptException -ArgumentList $message)
 }
 
+echo "Searching for MSBuild"
+Get-ChildItem -Recurse -Path 'C:\Program Files (x86)\Microsoft Visual Studio\' msbuild.exe
+
 if (Test-Path "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe") {
     $msbuild = "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe"
 }
