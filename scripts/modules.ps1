@@ -99,6 +99,8 @@ New-Module -ScriptBlock {
 
 New-Module -ScriptBlock {
     function Find-MSBuild() {
+		Get-ChildItem -Recurse -Path 'C:\Program Files (x86)\Microsoft Visual Studio\' msbuild.exe
+
         if (Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\15.0\bin\MSBuild.exe") {
             $msbuild = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\15.0\bin\MSBuild.exe"
         }
