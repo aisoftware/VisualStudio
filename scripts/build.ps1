@@ -80,7 +80,7 @@ if ($Package) {
     Write-Output "Building GitHub for Visual Studio"
 }
 
-Get-ChildItem -Recurse -Path 'C:\Program Files (x86)\Microsoft Visual Studio\' msbuild.exe
+Get-ChildItem -Recurse -Path 'C:\Program Files (x86)\MSBuild\' msbuild.exe
 
 Build-Solution GitHubVs.sln "Build" $config -Deploy:$Package -ForVSInstaller:$ForVSInstaller
 

@@ -15,8 +15,8 @@ Get-ChildItem -Recurse -Path 'C:\Program Files (x86)\Microsoft Visual Studio\' m
 if (Test-Path "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe") {
     $msbuild = "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe"
 }
-elseif (Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\MSBuild.exe") {
-    $msbuild = "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\MSBuild.exe"
+elseif (Test-Path "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Current\Bin\MSBuild.exe") {
+    $msbuild = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Current\Bin\MSBuild.exe"
 }
 else {
     Die("No suitable msbuild.exe found.")
